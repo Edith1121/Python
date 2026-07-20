@@ -36,5 +36,8 @@ countsplp = special_character_count*5
 
 score = countnop+countaup+countalp+countsplp
 point = ((score-16) / (50-16))*10
+if point >= 10:
+      point = 10
+
 pointfinal = round(point,1)
 print(f"The toughness of your password is {pointfinal}/10")
