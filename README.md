@@ -1,91 +1,159 @@
+# Python Projects
 
+A collection of Python projects I've built while learning Python through hands-on practice.
 
+I focus on learning by building projects rather than only following tutorials. Each project introduces new Python concepts and gradually increases in complexity.
 
+---
 
-# 🔐 Secure Password Generator
+## 📂 Projects
 
-A Python-based secure password generator that creates strong, random passwords using Python's `secrets` module. The program validates every generated password and automatically regenerates it if it contains weak patterns.
+### 1. 🔐 Password Strength Checker
 
-## Features
+A Python program that analyzes a password and evaluates its strength based on multiple characteristics.
 
-* Generates cryptographically secure passwords using the `secrets` module.
-* Default password length of **16 characters**.
-* Uses:
+#### Features
+- Checks password length
+- Checks uppercase characters
+- Checks lowercase characters
+- Checks numbers
+- Checks special characters
+- Detects repeated characters
+- Detects sequential characters
+- Calculates a password strength score
+- Converts the score into a rating out of 10
 
-  * Uppercase letters (`A-Z`)
-  * Lowercase letters (`a-z`)
-  * Numbers (`0-9`)
-  * Special characters
-* Automatically rejects passwords containing:
+#### Concepts learned
+- Strings
+- Loops
+- Functions
+- `string` module
+- String methods
+- Conditional statements
+- Sets
+- Basic scoring algorithms
 
-  * Four or more repeated characters (e.g. `AAAA`, `1111`, `$$$$`)
-  * Sequential lowercase letters (e.g. `abcd`)
-  * Sequential uppercase letters (e.g. `WXYZ`)
-  * Sequential digits (e.g. `1234`)
-  * Reverse sequences (e.g. `dcba`, `9876`)
-* Keeps generating passwords until a valid one is produced.
+---
 
-## Requirements
+### 2. 🔑 Password Generator
 
-* Python 3.8 or later
+A Python program that generates random and secure passwords using a combination of letters, numbers, and special characters.
 
-No external libraries are required.
+#### Features
+- Generates random passwords
+- Uses uppercase letters
+- Uses lowercase letters
+- Uses numbers
+- Uses special characters
+- Allows control over password length
+- Uses Python's `secrets` module for secure random generation
 
-## How to Run
+#### Concepts learned
+- `secrets`
+- `string`
+- Random generation
+- Strings
+- Lists
+- Loops
+- Functions
+- User input
 
-1. Clone the repository:
+---
 
-```bash
-git clone https://github.com/<your-username>/<repository-name>.git
-```
+### 3. 🔒 Password Hashing Program
 
-2. Open the project directory:
+A Python program for generating cryptographic hashes from input data using Python's `hashlib` module.
 
-```bash
-cd <repository-name>
-```
+#### Features
+- Accepts user input
+- Generates cryptographic hashes
+- Supports different hashing algorithms
+- Uses hexadecimal digest output
 
-3. Run the program:
+#### Concepts learned
+- `hashlib`
+- Hash functions
+- `.update()`
+- `.hexdigest()`
+- String encoding
+- Python modules
 
-```bash
-python main.py
-```
+---
 
-## Example Output
+### 4. 📁 File Organizer
+
+A Python program that automatically organizes files into folders based on their file extensions.
+
+#### Features
+- Detects file extensions
+- Separates files into categories
+- Automatically creates folders when required
+- Moves files using `shutil`
+- Handles images
+- Handles videos
+- Handles documents
+- Handles music
+- Handles archives
+- Handles source code
+- Places unknown file types into an `Other` folder
+- Ignores directories and only processes files
+
+#### Supported categories
+
+| Category | Examples |
+|---|---|
+| Images | JPG, PNG, GIF, WEBP, SVG, BMP |
+| Videos | MP4, MKV, AVI, MOV, WEBM |
+| Documents | PDF, DOCX, TXT, XLSX, PPTX |
+| Music | MP3, WAV, FLAC, AAC, OGG |
+| Archives | ZIP, RAR, 7Z, TAR, GZ |
+| Code | PY, JS, HTML, CSS, JAVA, C, CPP |
+| Other | Unknown file types |
+
+#### Concepts learned
+- `os`
+- `shutil`
+- `os.listdir()`
+- `os.path.join()`
+- `os.path.basename()`
+- `os.path.splitext()`
+- File paths
+- Directory creation
+- File movement
+- Sets
+- File extension handling
+
+---
+
+### 5. ✅ CLI To-Do List
+
+A command-line task management application that stores tasks permanently using JSON.
+
+#### Features
+- View tasks
+- Add tasks
+- Delete tasks
+- Modify task names
+- Mark tasks as completed/incomplete
+- Persistent task storage
+- Automatically saves changes to JSON
+- Handles missing JSON files
+- Handles invalid JSON
+- Validates user input
+- Handles invalid menu selections
+- Prevents empty task names
+
+#### Example
 
 ```text
-Generated Password:
-Q@8rLm!2Zx#7Pw$N
-```
+------TO-DO LIST-------
 
-## Project Structure
+What do you want to do ?
 
-```text
-.
-├── main.py
-└── README.md
-```
+1. View Tasks
+2. Add Tasks
+3. Delete Task
+4. Modify
+5. EXIT
 
-## Technologies Used
-
-* Python
-* `string`
-* `secrets`
-
-## Future Improvements
-
-* Allow users to choose the password length.
-* Guarantee at least one uppercase, lowercase, digit, and symbol.
-* Option to include or exclude symbols.
-* Password strength scoring.
-* Check against common or leaked passwords.
-* Export generated passwords to a file or clipboard.
-* Graphical user interface (GUI).
-
-## Why `secrets` Instead of `random`?
-
-Python's `secrets` module is designed for generating cryptographically secure random values. Unlike the `random` module, it is suitable for passwords, authentication tokens, and other security-related applications.
-
-## License
-
-This project is released under the MIT License.
+Please enter the number of your selection:
