@@ -1,0 +1,14 @@
+[
+    {
+        "task": "Learn Python",
+        "completed": false
+    },
+    {
+        "task": "Finish organizer",
+        "completed": true
+    },
+    {
+        "task": "Complete YT Watch later",
+        "completed": false
+    }
+]
